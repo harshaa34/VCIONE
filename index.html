@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>VCI Member Benefits — Dr. Garlapati Srinivasulu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --maroon-deep:#4A1220;
+    --maroon-mid:#6B1B2E;
+    --maroon-soft:#8A2A41;
+    --gold:#C9A24B;
+    --gold-light:#E7D3A0;
+    --gold-dim:#9C7F3D;
+    --ivory:#FAF7F1;
+    --paper:#F3EEE4;
+    --charcoal:#231D1B;
+    --slate:#726A63;
+    --slate-light:#A79E93;
+    --ok:#3E7A5C;
+    --line:rgba(35,29,27,0.10);
+    --radius:18px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    background:var(--paper);
+    color:var(--charcoal);
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+  a{color:inherit;}
+  .wrap{max-width:480px; margin:0 auto; position:relative;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(120% 140% at 15% -10%, rgba(201,162,75,0.18), transparent 55%),
+      linear-gradient(165deg, var(--maroon-deep) 0%, var(--maroon-mid) 60%, var(--maroon-soft) 100%);
+    padding:34px 24px 96px;
+    color:var(--ivory);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 14px);
+    pointer-events:none;
+  }
+  .brandrow{
+    display:flex; align-items:center; gap:12px;
+    position:relative; z-index:1;
+  }
+  .crest{
+    width:38px; height:38px; border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif; font-weight:600; font-size:15px;
+    color:var(--gold-light); letter-spacing:0.5px;
+    flex-shrink:0;
+  }
+  .brand-text .org{
+    font-size:12.5px; letter-spacing:0.6px; color:var(--gold-light); font-weight:500;
+  }
+  .brand-text .product{
+    font-family:'Fraunces', serif; font-size:20px; font-weight:500; margin-top:1px;
+  }
+  .verified-pill{
+    margin-top:26px;
+    display:inline-flex; align-items:center; gap:7px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(231,211,160,0.35);
+    padding:7px 13px 7px 10px; border-radius:100px;
+    font-size:12.5px; font-weight:500; color:var(--gold-light);
+    position:relative; z-index:1;
+    opacity:0; animation:riseIn 0.7s 0.5s ease forwards;
+  }
+  .verified-pill .tick{
+    width:15px; height:15px; border-radius:50%; background:var(--gold);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .verified-pill .tick svg{width:9px; height:9px;}
+  .hero-caption{
+    margin-top:14px; font-size:13.5px; color:rgba(250,247,241,0.62);
+    max-width:300px; position:relative; z-index:1;
+  }
+
+  /* ---------- MEMBER CARD ---------- */
+  .card-lift{
+    margin:-72px 20px 0; position:relative; z-index:2;
+    opacity:0; transform:translateY(14px);
+    animation:riseIn 0.7s 0.15s ease forwards;
+  }
+  @keyframes riseIn{ to{opacity:1; transform:translateY(0);} }
+
+  .member-card{
+    border-radius:20px;
+    padding:26px 24px 24px;
+    background:linear-gradient(145deg, #5A1727 0%, #3E0F1B 100%);
+    box-shadow:0 24px 48px -18px rgba(74,18,32,0.55), 0 2px 0 rgba(255,255,255,0.04) inset;
+    border:1px solid rgba(201,162,75,0.35);
+    position:relative; overflow:hidden;
+    color:var(--ivory);
+  }
+  .member-card::before{
+    content:""; position:absolute; top:0; left:-40%; width:45%; height:100%;
+    background:linear-gradient(100deg, transparent, rgba(231,211,160,0.16), transparent);
+    transform:skewX(-18deg);
+    animation:sheen 2.6s 0.9s ease-out 1;
+  }
+  @keyframes sheen{
+    0%{left:-45%;} 55%{left:120%;} 100%{left:120%;}
+  }
+  .card-top{display:flex; align-items:flex-start; gap:14px;}
+  .avatar{
+    width:56px; height:56px; border-radius:50%; flex-shrink:0;
+    background:linear-gradient(150deg, var(--gold-light), var(--gold-dim));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif; font-size:19px; font-weight:600; color:var(--maroon-deep);
+    border:2px solid rgba(231,211,160,0.5);
+  }
+  .card-id-tag{
+    font-size:11px; letter-spacing:0.5px; color:var(--gold-light); opacity:0.85;
+    margin-bottom:3px;
+  }
+  .member-name{
+    font-family:'Fraunces', serif; font-size:24px; font-weight:500; line-height:1.18;
+  }
+  .member-role{
+    margin-top:4px; font-size:13px; color:var(--gold-light);
+  }
+  .card-divider{
+    height:1px; background:rgba(231,211,160,0.22); margin:20px 0 16px;
+  }
+  .card-grid{
+    display:grid; grid-template-columns:1fr 1fr; row-gap:16px; column-gap:12px;
+  }
+  .card-grid .k{
+    font-size:10.5px; color:rgba(231,211,160,0.75); margin-bottom:3px;
+  }
+  .card-grid .v{
+    font-size:14px; font-weight:500;
+  }
+
+  /* ---------- STATUS ---------- */
+  .status-section{padding:26px 20px 6px;}
+  .status-headline{
+    display:flex; align-items:center; gap:9px;
+  }
+  .status-headline .dot{
+    width:9px; height:9px; border-radius:50%; background:var(--ok);
+    box-shadow:0 0 0 4px rgba(62,122,92,0.15);
+  }
+  .status-headline h2{
+    font-family:'Fraunces', serif; font-weight:500; font-size:19px;
+  }
+  .status-grid{
+    margin-top:16px;
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;
+  }
+  .status-tile{
+    background:var(--ivory); border:1px solid var(--line); border-radius:14px;
+    padding:14px 10px; text-align:center;
+  }
+  .status-tile .tick{
+    width:22px; height:22px; border-radius:50%; margin:0 auto 8px;
+    background:rgba(62,122,92,0.12); display:flex; align-items:center; justify-content:center;
+  }
+  .status-tile .tick svg{width:11px; height:11px; stroke:var(--ok);}
+  .status-tile .label{font-size:10.5px; color:var(--slate); letter-spacing:0.2px;}
+  .status-tile .value{font-size:13.5px; font-weight:600; margin-top:2px; color:var(--charcoal);}
+  .valid-row{
+    margin-top:10px; display:flex; align-items:center; justify-content:space-between;
+    background:var(--ivory); border:1px solid var(--line); border-radius:14px; padding:13px 16px;
+  }
+  .valid-row .label{font-size:12.5px; color:var(--slate);}
+  .valid-row .value{font-size:14px; font-weight:600; color:var(--maroon-mid);}
+
+  /* ---------- BENEFITS ---------- */
+  .benefits-section{padding:34px 20px 6px;}
+  .section-heading{
+    font-family:'Fraunces', serif; font-weight:500; font-size:19px; margin-bottom:14px;
+  }
+  .partner-card{
+    background:var(--ivory); border:1px solid var(--line); border-radius:var(--radius);
+    padding:20px; position:relative;
+  }
+  .partner-top{display:flex; align-items:center; gap:12px;}
+  .partner-mark{
+    width:46px; height:46px; border-radius:12px; flex-shrink:0;
+    background:linear-gradient(150deg, var(--maroon-mid), var(--maroon-deep));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif; color:var(--gold-light); font-size:16px; font-weight:600;
+  }
+  .partner-name{font-size:16px; font-weight:600;}
+  .partner-badge{
+    display:inline-block; margin-top:3px;
+    font-size:10.5px; color:var(--maroon-mid); background:rgba(107,27,46,0.08);
+    padding:2px 8px; border-radius:100px; font-weight:600; letter-spacing:0.2px;
+  }
+  .partner-desc{margin-top:14px; font-size:13.5px; color:var(--slate); line-height:1.55;}
+  .view-benefits-btn{
+    margin-top:16px; width:100%; padding:13px; border:none; border-radius:12px;
+    background:var(--maroon-deep); color:var(--ivory); font-size:14px; font-weight:600;
+    font-family:inherit; cursor:pointer;
+  }
+  .view-benefits-btn:focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+  .demo-flag{
+    margin-top:12px; font-size:11px; color:var(--slate-light); text-align:center;
+  }
+
+  /* ---------- FUTURE PARTNERS ---------- */
+  .future-section{padding:32px 20px 6px;}
+  .future-list{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; margin-top:14px;
+  }
+  .future-chip{
+    border:1px dashed var(--slate-light); border-radius:12px; padding:14px 8px;
+    text-align:center; font-size:12px; color:var(--slate); font-weight:500;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer{
+    padding:40px 24px 44px; text-align:center;
+  }
+  .footer .tag{
+    font-size:12px; font-weight:600; color:var(--maroon-mid); letter-spacing:0.3px;
+  }
+  .footer p{
+    margin-top:8px; font-size:12px; color:var(--slate-light); line-height:1.6; max-width:360px; margin-left:auto; margin-right:auto;
+  }
+  .footer .route{
+    margin-top:14px; font-size:11px; color:var(--slate-light); font-family:'SFMono-Regular', Consolas, monospace;
+  }
+
+  /* ---------- MODAL ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; background:rgba(35,29,27,0.55);
+    display:flex; align-items:flex-end; justify-content:center;
+    opacity:0; pointer-events:none; transition:opacity 0.25s ease;
+    z-index:20;
+  }
+  .modal-overlay.open{opacity:1; pointer-events:auto;}
+  .modal{
+    width:100%; max-width:480px; background:var(--ivory);
+    border-radius:20px 20px 0 0; padding:24px 24px 32px;
+    transform:translateY(100%); transition:transform 0.3s cubic-bezier(.2,.8,.3,1);
+  }
+  .modal-overlay.open .modal{transform:translateY(0);}
+  .modal-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;}
+  .modal-head h3{font-family:'Fraunces', serif; font-weight:500; font-size:18px;}
+  .modal-close{
+    width:30px; height:30px; border-radius:50%; border:1px solid var(--line);
+    background:none; display:flex; align-items:center; justify-content:center; cursor:pointer;
+    font-size:15px; color:var(--slate); font-family:inherit;
+  }
+  .modal-sub{font-size:12.5px; color:var(--slate); margin-bottom:16px;}
+  .benefit-list{list-style:none;}
+  .benefit-list li{
+    display:flex; gap:10px; padding:12px 0; border-top:1px solid var(--line); font-size:13.5px;
+  }
+  .benefit-list li:first-child{border-top:none;}
+  .benefit-list .b-tick{
+    width:18px; height:18px; border-radius:50%; background:rgba(62,122,92,0.12);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;
+  }
+  .benefit-list .b-tick svg{width:9px; height:9px; stroke:var(--ok);}
+  .modal-note{
+    margin-top:16px; padding:12px 14px; background:rgba(201,162,75,0.12); border-radius:10px;
+    font-size:11.5px; color:var(--gold-dim); line-height:1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="brandrow">
+      <div class="crest">VCI</div>
+      <div class="brand-text">
+        <div class="org">Vasavi Clubs International</div>
+        <div class="product">Member Benefits</div>
+      </div>
+    </div>
+    <div class="verified-pill">
+      <span class="tick"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke="#4A1220" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      VCI member verified
+    </div>
+    <p class="hero-caption">Scanned from a physical VCI membership card.</p>
+  </div>
+
+  <!-- MEMBER CARD -->
+  <div class="card-lift">
+    <div class="member-card">
+      <div class="card-top">
+        <div class="avatar">GS</div>
+        <div>
+          <div class="card-id-tag">VCI-2027-00001</div>
+          <div class="member-name">Dr. Garlapati<br/>Srinivasulu</div>
+          <div class="member-role">International Executive Vice President</div>
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-grid">
+        <div>
+          <div class="k">Club</div>
+          <div class="v">Vasavi Club — Demo</div>
+        </div>
+        <div>
+          <div class="k">District</div>
+          <div class="v">Demo District</div>
+        </div>
+        <div>
+          <div class="k">Membership type</div>
+          <div class="v">VCI Member</div>
+        </div>
+        <div>
+          <div class="k">Valid until</div>
+          <div class="v">31 Mar 2027</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATUS -->
+  <div class="status-section">
+    <div class="status-headline">
+      <span class="dot"></span>
+      <h2>Active member</h2>
+    </div>
+    <div class="status-grid">
+      <div class="status-tile">
+        <div class="tick"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg></div>
+        <div class="label">AAF status</div>
+        <div class="value">Paid</div>
+      </div>
+      <div class="status-tile">
+        <div class="tick"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg></div>
+        <div class="label">Membership</div>
+        <div class="value">Active</div>
+      </div>
+      <div class="status-tile">
+        <div class="tick"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg></div>
+        <div class="label">Benefits</div>
+        <div class="value">Eligible</div>
+      </div>
+    </div>
+    <div class="valid-row">
+      <span class="label">Valid until</span>
+      <span class="value">31 March 2027</span>
+    </div>
+  </div>
+
+  <!-- BENEFITS -->
+  <div class="benefits-section">
+    <h2 class="section-heading">Member benefits</h2>
+    <div class="partner-card">
+      <div class="partner-top">
+        <div class="partner-mark">VH</div>
+        <div>
+          <div class="partner-name">Vasavi Hospitals</div>
+          <span class="partner-badge">VCI Partner</span>
+        </div>
+      </div>
+      <p class="partner-desc">Exclusive benefits available to eligible VCI members, as approved under the VCI–Vasavi Hospitals partnership.</p>
+      <button class="view-benefits-btn" onclick="document.getElementById('modal').classList.add('open')">View benefits</button>
+      <div class="demo-flag">Sample benefits shown for this demonstration</div>
+    </div>
+  </div>
+
+  <!-- FUTURE PARTNERS -->
+  <div class="future-section">
+    <h2 class="section-heading">More partners joining soon</h2>
+    <div class="future-list">
+      <div class="future-chip">Healthcare</div>
+      <div class="future-chip">Hospitality</div>
+      <div class="future-chip">Education</div>
+      <div class="future-chip">Dining</div>
+      <div class="future-chip">Travel</div>
+      <div class="future-chip">Retail</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="tag">Prototype demonstration</div>
+    <p>This webpage is a demonstration of the proposed VCI Member Benefits platform. Member and partner information shown here is for demonstration purposes only.</p>
+    <div class="route">/member/VCI-2027-00001</div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>Vasavi Hospitals — sample benefits</h3>
+      <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕</button>
+    </div>
+    <div class="modal-sub">Demonstration only. Final terms will follow the approved MOU.</div>
+    <ul class="benefit-list">
+      <li><span class="b-tick"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg></span>Special consultation benefits</li>
+      <li><span class="b-tick"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg></span>Diagnostic benefits</li>
+      <li><span class="b-tick"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg></span>Health check-up benefits</li>
+      <li><span class="b-tick"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6L5 9L10 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg></span>Other benefits as per approved MOU</li>
+    </ul>
+    <div class="modal-note">These are demo benefits for presentation purposes. Actual partnership terms are pending final approval.</div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('modal').addEventListener('click', function(e){
+    if(e.target === this) this.classList.remove('open');
+  });
+</script>
+
+</body>
+</html>
